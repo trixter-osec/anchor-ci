@@ -102,7 +102,7 @@ popd
 if [[ "$is_prerelease" -eq 0 ]]; then
     # Bump benchmark files
     pushd tests/bench
-    anchor run bump-version -- --anchor-version $version
+    # anchor run bump-version -- --anchor-version $version
     popd
 fi
 
