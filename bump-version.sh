@@ -44,12 +44,7 @@ git grep -l $old_version -- $allow_globs |
 
 # Avoid updating the docs for pre-release builds
 if [[ "$is_prerelease" -eq 0 ]]; then
-    latest_stable_version=$(
-        git tag --sort=-version:refname | \
-            grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | \
-            head -n1 | \
-            sed 's/^v//'
-    )
+    latest_stable_version="v0.32.1"
     echo "Latest stable version for documentation was $latest_stable_version..."
 
     # Separately handle docs because blindly replacing the old version with the new
