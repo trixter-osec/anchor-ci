@@ -51,7 +51,6 @@ jobs:
           set -xeou pipefail
 
           # required for tests
-          solana-keygen new --no-bip39-passphrase
           ./setup-tests.sh
 
           ./bump-version.sh "$VERSION"
